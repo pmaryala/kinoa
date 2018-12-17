@@ -52,6 +52,7 @@ contactsTab: ElementFinder;
 
 selectAddContact():promise.Promise<any> {
     this.waitForPresenceOf(this.addDrpdwn, browser.params.waitForObjectTimeOut);
+    this.waitForElementToBeClickable(this.addDrpdwn, browser.params.waitForObjectTimeOut);
     return this.addDrpdwn.click().then(async () => {
         await this.addAContact.click();
       });
