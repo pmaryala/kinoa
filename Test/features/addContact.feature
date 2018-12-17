@@ -1,6 +1,6 @@
 @addcontact
 
-Feature: As a user, I should be able to create a contact
+Feature: As a user, I  should be able to create a contact
 
 Scenario: Create a new contact
  Given user logs in
