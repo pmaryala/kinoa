@@ -8,7 +8,7 @@ exports.config = {
     specs: ['./Test/features/*.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    baseUrl: "localhost:3000/",
+    baseUrl: "192.168.99.1:3000/",
     cucumberOpts: {
         compiler: "ts:ts-node/register",
         strict: true,

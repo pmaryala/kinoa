@@ -1057,7 +1057,7 @@ cucumber-tag-expressions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cucumber-tag-expressions/-/cucumber-tag-expressions-1.1.1.tgz#7f5c7b70009bc2b666591bfe64854578bedee85a"
 
-cucumber@^5.0.1:
+cucumber@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/cucumber/-/cucumber-5.0.3.tgz#0935a816a0bcc02ea01ef67be30e7367c9c79984"
   dependencies:
