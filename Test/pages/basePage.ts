@@ -1,7 +1,6 @@
-import { browser,promise, protractor } from 'protractor';
+import { browser, promise, protractor } from "protractor";
 
-export class BasePage  {
-
+export class BasePage {
   waitForElementToBeClickable(webElement, timeout): promise.Promise<any> {
     const until = protractor.ExpectedConditions;
     const deferred = protractor.promise.defer();
