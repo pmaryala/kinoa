@@ -4,7 +4,7 @@ exports.config = {
     params: {
         normalStepTimeOut: 180000,
     },
-    // seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['./Test/features/*.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
