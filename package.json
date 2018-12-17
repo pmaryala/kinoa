@@ -20,6 +20,7 @@
     "angular-ui-router": "^1.0.20",
     "chai": "^4.2.0",
     "cucumber": "^5.0.3",
+    "cucumber-html-reporter": "^4.0.4",
     "gulp": "^3.6.2",
     "gulp-concat": "^2.2.0",
     "gulp-jshint": "^1.6.1",
