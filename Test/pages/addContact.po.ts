@@ -72,7 +72,7 @@ fillDetailsOfContact():promise.Promise<any> {
 
 createContact():promise.Promise<any> {
     this.waitForPresenceOf(this.createByContactBtn, browser.params.waitForObjectTimeOut);
-    browser.sleep(5000);
+    this.waitForElementToBeClickable(this.createByContactBtn, browser.params.waitForObjectTimeOut);
     return this.createByContactBtn.click();
 }
 
@@ -89,16 +89,13 @@ checkStatus():promise.Promise<any> {
 searchForContact(): promise.Promise<any> {
     this.contactsTab.click();
     this.waitForPresenceOf(this.searchBox, browser.params.waitForObjectTimeOut);
-    browser.sleep(5000);
     this.searchBox.sendKeys('Priyanka');
-    browser.sleep(5000);
     this.waitForElementToBeClickable(this.searchBtn, browser.params.waitForObjectTimeOut);
 
     return this.searchBtn.click();
 }
 
 searchResult(): promise.Promise<any> {
-    browser.sleep(5000);
     return this.resultsSection.isPresent();
 }
 }
