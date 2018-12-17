@@ -9,7 +9,7 @@ import {
 import { BasePage } from './basePage';
 
 export class AddContactPage extends BasePage {
-    addDrpdwn: ElementFinder;
+addDrpdwn: ElementFinder;
 addAContact: ElementFinder;
 firstNameTxtBox: ElementFinder;
 lastNameTxtBox: ElementFinder;
@@ -72,7 +72,7 @@ fillDetailsOfContact():promise.Promise<any> {
 
 createContact():promise.Promise<any> {
     this.waitForPresenceOf(this.createByContactBtn, browser.params.waitForObjectTimeOut);
-
+    browser.sleep(5000);
     return this.createByContactBtn.click();
 }
 
