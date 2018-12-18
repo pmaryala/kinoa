@@ -46,6 +46,7 @@ export class AddContactPage extends BasePage {
   }
 
   selectAddContact(): promise.Promise<any> {
+    browser.sleep(5000);
     this.waitForPresenceOf(this.addDrpdwn, browser.params.waitForObjectTimeOut);
     this.waitForElementToBeClickable(
       this.addDrpdwn,
