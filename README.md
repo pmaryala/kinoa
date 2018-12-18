@@ -1,10 +1,10 @@
-Kinoa::CRM
+AngularJS Application::CRM
 =======
 [![Codeship.io](https://www.codeship.io/projects/9900cea0-b910-0131-2051-6e04503967cb/status)](https://www.codeship.io)
 
 ## Description
 
-Kinoa is a CRM built with angularJS and Deployd.
+AngularJS Application is a CRM built with angularJS and Deployd.
 
 ## Local use
 
@@ -16,7 +16,7 @@ Kinoa is a CRM built with angularJS and Deployd.
 * Bower installed globally
 
 ````bash
-git clone https://github.com/NicolasRitouet/kinoa.git
+git clone https://github.com/pmaryala/kinoa.git
 cd kinoa
 npm install
 bower install
@@ -32,9 +32,5 @@ Open [http://localhost:3000/](http://localhost:3000/) to use the application.
 
 ## TODO
 
-- internationalize Kinoa (because not everybody speaks french!)
 - add tests
-- add CI with Wercker
-- make the CRM more generic (remove tax centers)
-
-##new change
+- add CI with GitHub / Jenkins 
