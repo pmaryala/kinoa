@@ -1,10 +1,10 @@
-Kinoa::CRM
+AngularJS Application::CRM
 =======
 [![Codeship.io](https://www.codeship.io/projects/9900cea0-b910-0131-2051-6e04503967cb/status)](https://www.codeship.io)
 
 ## Description
 
-Kinoa is a CRM built with angularJS and Deployd.
+AngularJS Application is a CRM built with angularJS and Deployd.
 
 ## Local use
 
