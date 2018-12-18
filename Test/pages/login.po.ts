@@ -12,8 +12,8 @@ password: ElementFinder;
     }
     
     login():promise.Promise<any> {
-        this.username.sendKeys('priyankaadaps');
-        this.password.sendKeys('priyankaadaps');
+        this.username.sendKeys('subhash');
+        this.password.sendKeys('subhash');
         
         return element(by.cssContainingText('button', 'Login')).click();
         }
