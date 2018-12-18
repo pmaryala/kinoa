@@ -29,10 +29,11 @@ Before({ timeout: 100 * 1000 }, async function(scenario) {
     ...this.context
   };
   browser.ignoreSynchronization = true;
+ 
   browser
     .manage()
-    .window()
-    .maximize();
+    .window().setSize(1044, 784);
+    
   browser
     .manage()
     .timeouts()
