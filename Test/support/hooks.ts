@@ -32,9 +32,8 @@ Before({ timeout: 100 * 1000 }, async function(scenario) {
  
   browser
     .manage()
-    .window()
-    .maximize();
-    
+    .window().maximize();
+
   browser
     .manage()
     .timeouts()
