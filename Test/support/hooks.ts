@@ -32,7 +32,8 @@ Before({ timeout: 100 * 1000 }, async function(scenario) {
  
   browser
     .manage()
-    .window().setSize(1382,744);
+    .window()
+    .maximize();
     
   browser
     .manage()
