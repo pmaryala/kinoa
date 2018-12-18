@@ -1,4 +1,4 @@
-import { $, browser, by, element, ElementFinder, promise } from "protractor";
+import { $, browser, by, element, ElementFinder, promise, ExpectedConditions } from "protractor";
 import { BasePage } from "./basePage";
 
 export class AddContactPage extends BasePage {
@@ -46,7 +46,7 @@ export class AddContactPage extends BasePage {
   }
 
   selectAddContact(): promise.Promise<any> {
-    browser.sleep(5000);
+    browser.wait(ExpectedConditions.visibilityOf(this.addDrpdwn), 3000, 'error message')
     this.waitForPresenceOf(this.addDrpdwn, browser.params.waitForObjectTimeOut);
     this.waitForElementToBeClickable(
       this.addDrpdwn,
