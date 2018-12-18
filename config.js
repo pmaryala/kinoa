@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var reporter = require('./dist/out-tsc/Test/support/reporter');
+var reporter = require('./dist/out-tsc/test/support/reporter');
 
 exports.config = {
     params: {
@@ -22,7 +22,7 @@ exports.config = {
       directConnect: true,
       // seleniumAddress: 'http://localhost:4444/wd/hub',
       
-    specs: ['./Test/**/*.feature'],
+    specs: ['./test/**/*.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     baseUrl: '192.168.99.1:3000/',
@@ -39,7 +39,7 @@ exports.config = {
        format: 'json:./reports/json/cucumber_report.json',
         strict: true,
         // format: ['pretty'],
-        require: ['./Test/stepdefinitions/*.steps.ts', './Test/support/hooks.js'],
+        require: ['./test/stepdefinitions/*.steps.ts', './test/support/hooks.js'],
         tags: '@addcontact'
     },
 

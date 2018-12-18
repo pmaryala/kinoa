@@ -10,7 +10,7 @@
         "line": 1
       }
     ],
-    "uri": "Test\\features\\addContact.feature",
+    "uri": "test\\features\\addContact.feature",
     "elements": [
       {
         "id": "as-a-user,-i--should-be-able-to-create-a-contact;create-a-new-contact",
@@ -33,7 +33,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1740000000
+              "duration": 1672000000
             }
           },
           {
@@ -46,7 +46,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 366000000
+              "duration": 306000000
             }
           },
           {
@@ -59,7 +59,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 425000000
+              "duration": 314000000
             }
           },
           {
@@ -72,7 +72,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 971000000
+              "duration": 831000000
             }
           },
           {
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 399000000
+              "duration": 321000000
             }
           },
           {
@@ -98,7 +98,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 21000000
             }
           },
           {
@@ -125,8 +125,7 @@
               "location": "D_10420181121\\Projects\\kinoa\\node_modules\\cucumber\\src\\support_code_library_builder\\build_helpers.js:97"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]

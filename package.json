@@ -38,6 +38,7 @@
     "karma-jasmine": "^0.3.8",
     "karma-spec-reporter": "0.0.32",
     "mocha": "^5.2.0",
+    "pretty-quick": "^1.6.0",
     "protractor": "^5.4.1",
     "protractor-cucumber-framework": "^6.1.1",
     "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0",
@@ -45,7 +46,13 @@
     "typescript": "^3.2.1"
   },
   "scripts": {
-    "start_dpd": "node node_modules/deployd/bin/dpd"
+    "start_dpd": "node node_modules/deployd/bin/dpd",
+    "cucumber": "protractor config.js",
+    "build:cucumber": "tsc --p tsconfig.json",
+    "ci:lint": "npm run lint",
+    "lint": "npm-run-all lint:*",
+    "precommit": "npm run ci:lint && pretty-quick --staged",
+    "precucumber": "webdriver-manager update"
   },
   "engines": {
     "node": ">= 4",

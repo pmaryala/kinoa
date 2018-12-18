@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-var reporter_1 = require('./dist/out-tsc/Test/support/reporter');
+var reporter_1 = require('./dist/out-tsc/test/support/reporter');
 
 exports.config = {
   params: {
@@ -27,7 +27,7 @@ exports.config = {
   directConnect: true,
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
-  specs: ['./Test/features/**/*.feature'],
+  specs: ['./test/features/**/*.feature'],
   beforeLaunch: function() {
     require('ts-node').register({
       project: 'tsconfig.json'
@@ -39,7 +39,7 @@ exports.config = {
   cucumberOpts: {
     compiler: [],
     format: 'json:./reports/json/cucumber_report.json',
-    require: ['./Test/**/*.steps.ts','./Test/support/*.ts'],
+    require: ['./test/**/*.steps.ts','./test/support/*.ts'],
     strict: true,
     tags: '@addcontact'
   },
