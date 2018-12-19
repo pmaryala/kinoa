@@ -4,12 +4,14 @@ import { expect } from 'chai';
 import { browser } from 'protractor';
 import { LoginPage } from '../pages/login.po';
 
+var testConfig = require('../testdata/data.json');
+
 const addContactPage: AddContactPage = new AddContactPage();
 const loginPage: LoginPage = new LoginPage();
 
 
 Given ('user logs in', { timeout: browser.params.normalStepTimeOut }, async () => {
-  await loginPage.login();
+  await loginPage.login(testConfig.username,testConfig.password);
 }
 );
 

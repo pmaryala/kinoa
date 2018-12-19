@@ -91,7 +91,7 @@ cucumber_1.Before({ timeout: 100 * 1000 }, function (scenario) {
                         .manage()
                         .timeouts()
                         .implicitlyWait(6000);
-                    return [4 /*yield*/, protractor_1.browser.get('localhost:3000/')];
+                    return [4 /*yield*/, protractor_1.browser.get('http://192.168.99.1:3000/')];
                 case 1:
                     _a.sent();
                     logger.info("scenario " + scenario.pickle.name + " execution started");

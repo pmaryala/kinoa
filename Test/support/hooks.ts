@@ -1,6 +1,7 @@
 import { After, AfterAll, Before, BeforeAll } from 'cucumber';
 import { browser } from 'protractor';
 
+
 // tslint:disable-next-line:no-require-imports
 const log4js = require('log4js');
 const logger = log4js.getLogger();
@@ -9,7 +10,6 @@ BeforeAll({ timeout: 1000 * 1000 }, async () => {
   // await browser.get(config.baseUrl);
  
 });
-
 
 // tslint:disable-next-line:typedef
 After({ timeout: 100 * 1000 }, async function(scenario) {
@@ -38,7 +38,7 @@ Before({ timeout: 100 * 1000 }, async function(scenario) {
     .manage()
     .timeouts()
     .implicitlyWait(6000);
-  await browser.get('localhost:3000/');
+ await browser.get('http://192.168.99.1:3000/');
   logger.info(`scenario ${scenario.pickle.name} execution started`);
 });
 

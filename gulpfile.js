@@ -58,7 +58,7 @@ gulp.task('server', function () {
 // open browser
 gulp.task('open', function() {
   var options = {
-    url: 'http://localhost:3000'
+    url: 'http://192.168.99.1:3000/'
   };
   return gulp.src('./public/index.html')
     .pipe(openAfterStart('', options));

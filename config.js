@@ -18,14 +18,14 @@ exports.config = {
           args: ['no-sandbox', 'disable-gpu']
         }
       },
-
+      ignoreUncaughtExceptions: true,
       directConnect: true,
-      // seleniumAddress: 'http://localhost:4444/wd/hub',
+       //seleniumAddress: 'http://localhost:4444/wd/hub',
       
     specs: ['./test/**/*.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    baseUrl: '192.168.99.1:3000/',
+    baseUrl: 'http://192.168.99.1:3000/',
 
     beforeLaunch: function() {
         require('ts-node').register({
@@ -57,5 +57,4 @@ exports.config = {
     onComplete: function() {
       reporter.Reporter.createHTMLReport();
       }
-    
 };
