@@ -1,6 +1,8 @@
 import { BasePage } from "./basePage";
 import { ElementFinder, element, by, promise } from "protractor";
 
+
+
 export class LoginPage extends BasePage {
 username: ElementFinder;
 password: ElementFinder;
@@ -11,9 +13,10 @@ password: ElementFinder;
         this.password = element(by.css('input[type="password"]'));
     }
     
-    login():promise.Promise<any> {
-        this.username.sendKeys('subhash');
-        this.password.sendKeys('subhash');
+    login(username,password):promise.Promise<any> {
+        this.username.sendKeys(username);
+        this.password.sendKeys(password);
+        console.log (`User creadetials are : ${username} and  ${password}`);
         
         return element(by.cssContainingText('button', 'Login')).click();
         }
