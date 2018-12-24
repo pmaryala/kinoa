@@ -20,6 +20,7 @@
     "module": "commonjs",
     "types":[
       "node"
-    ]
+    ],
+    "include": ["Test/**/*.ts"]
   },
 }
