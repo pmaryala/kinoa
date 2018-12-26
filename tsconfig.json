@@ -12,5 +12,5 @@
     "allowJs": false,
     "noEmit": true
   },
-  "include": ["Test/**/*.ts"]
+  "include": ["**/*.ts"]
 }
