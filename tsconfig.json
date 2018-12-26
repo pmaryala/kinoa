@@ -1,6 +1,6 @@
 {
-  "compileOnSave": false,
   "include": ["**/*.ts"],
+  "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc-test",
     "sourceMap": true,
