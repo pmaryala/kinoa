@@ -1,5 +1,6 @@
 {
   "compileOnSave": false,
+  "include": ["**/*.ts"],
   "compilerOptions": {
     "outDir": "./dist/out-tsc-test",
     "sourceMap": true,
@@ -10,7 +11,6 @@
     "target": "es5",
     "lib": ["es2017", "dom"],
     "allowJs": false,
-    "noEmit": true
-  },
-  "include": ["**/*.ts"]
+    "noEmit": true,
+  }
 }
