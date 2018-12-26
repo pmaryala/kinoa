@@ -1,14 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc/e2e",
+    "outDir": "./dist/out-tsc-test",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "lib": ["es2017", "dom"]
+    "lib": ["es2017", "dom"],
+    "allowJs": false,
   },
   "include": ["Test/**/*.ts"]
 }
