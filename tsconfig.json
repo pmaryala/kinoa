@@ -1,16 +1,16 @@
 {
   "compileOnSave": false,
-  "include": ["Test/**/*.ts"],
   "compilerOptions": {
-    "outDir": "./dist/out-tsc-test",
+    "outDir": "./dist/out-tsc/test",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es6",
-    "lib": ["es2017", "dom"],
-    "allowJs": false,
-    "noEmit": true,
-  }
+    "lib": ["es2017", "dom"]
+  },
+  "include": ["test/**/*.ts"],
+  "exclude": ["node_modules"]
+
 }

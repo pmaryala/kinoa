@@ -4,7 +4,6 @@ import { browser } from 'protractor';
 
 // tslint:disable-next-line:no-require-imports
 const log4js = require('log4js');
-const logger = log4js.getLogger();
 
 BeforeAll({ timeout: 1000 * 1000 }, async () => {
   // await browser.get(config.baseUrl);
@@ -18,7 +17,6 @@ After({ timeout: 100 * 1000 }, async function(scenario) {
   const screenShot = await browser.takeScreenshot();
   // tslint:disable-next-line:no-invalid-this
   this.attach(screenShot, 'image/png');
-  logger.info(`scenario ${scenario.pickle.name} completed execution`);
 });
 
 // tslint:disable-next-line:typedef
@@ -38,8 +36,7 @@ Before({ timeout: 100 * 1000 }, async function(scenario) {
     .manage()
     .timeouts()
     .implicitlyWait(6000);
- await browser.get('http://192.168.99.1:3000/');
-  logger.info(`scenario ${scenario.pickle.name} execution started`);
+ await browser.get('/');
 });
 
 AfterAll({ timeout: 100 * 1000 }, async () => {

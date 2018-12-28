@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var reporter = require('./dist/out-tsc/test/support/reporter');
 
 exports.config = {
     params: {
@@ -25,7 +24,7 @@ exports.config = {
     specs: ['./test/**/*.feature'],
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
-    baseUrl: 'http://192.168.99.1:3000/',
+    baseUrl: 'http://192.168.99.1:3000/#/login',
 
     beforeLaunch: function() {
         require('ts-node').register({
@@ -39,22 +38,11 @@ exports.config = {
        format: 'json:./reports/json/cucumber_report.json',
         strict: true,
         // format: ['pretty'],
-        require: ['./test/stepdefinitions/*.steps.ts', './test/support/hooks.js'],
+      require: ['./test/stepdefinitions/*.steps.ts', './test/support/hooks.ts'],
         tags: '@addcontact'
     },
 
-    plugins: [
-      {
-        package: require.resolve('protractor-multiple-cucumber-html-reporter-plugin'),
-        options: {
-          // read the options part
-          automaticallyGenerateReport: true,
-          removeExistingJsonReportFile: true
-        }
-      }
-    ],
-
     onComplete: function() {
-      reporter.Reporter.createHTMLReport();
+      //reporter.Reporter.createHTMLReport();
       }
 };
