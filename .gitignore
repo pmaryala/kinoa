@@ -25,3 +25,6 @@ npm-debug.log
 /public/temp
 /public/dist
 /public/bower_components
+dist
+package-lock.json
+reports
