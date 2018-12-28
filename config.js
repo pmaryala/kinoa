@@ -14,7 +14,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-          args: ['no-sandbox', 'disable-gpu']
+          args: ['no-sandbox', 'disable-gpu', 'headless']
         }
       },
       ignoreUncaughtExceptions: true,
