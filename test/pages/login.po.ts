@@ -16,7 +16,7 @@ password: ElementFinder;
     login(username,password):promise.Promise<any> {
         this.username.sendKeys(username);
         this.password.sendKeys(password);
-        console.log (`User creadetials are : ${username} and  ${password}`);
+        console.log (`User credentials are : ${username} and  ${password}`);
         
         return element(by.cssContainingText('button', 'Login')).click();
         }

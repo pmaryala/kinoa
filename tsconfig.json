@@ -1,26 +1,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "../dist/out-tsc-Test",
+    "outDir": "./dist/out-tsc/test",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": ["node_modules/@types"],
-    "lib": [
-      "es2016"
-    ],
-    "plugins": [
-      {
-        "name": "tslint-language-service"
-      }
-    ],
-    "module": "commonjs",
-    "types":[
-      "node"
-    ],
-    "include": ["Test/**/*.ts"]
+    "target": "es6",
+    "lib": ["es2017", "dom"]
   },
+  "include": ["test/**/*.ts"],
+  "exclude": ["node_modules"]
+
 }
