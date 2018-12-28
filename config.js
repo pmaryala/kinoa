@@ -35,7 +35,7 @@ exports.config = {
       cucumberOpts: {
        compiler: "ts:ts-node/register",
        //compiler: [],
-       format: 'json:./reports/json/cucumber_report.json',
+       // format: 'json:./reports/json/cucumber_report.json',
         strict: true,
         // format: ['pretty'],
       require: ['./test/stepdefinitions/*.steps.ts', './test/support/hooks.ts'],
