@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-
+var jsonReports = process.cwd() + '/reports/json';
+var reporter = require('./dist/out-tsc/test/support/reporter');
 exports.config = {
     params: {
         pageLoadTimeOut: 180000,
@@ -14,7 +15,7 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         chromeOptions: {
-          args: ['no-sandbox', 'disable-gpu', 'headless']
+          args: ['no-sandbox', 'disable-gpu']
         }
       },
       ignoreUncaughtExceptions: true,
@@ -31,18 +32,29 @@ exports.config = {
           project: 'tsconfig.json'
         });
       },
-
+      onPrepare: function() {
+        reporter.Reporter.createDirectory(jsonReports);
+      },
       cucumberOpts: {
        compiler: "ts:ts-node/register",
        //compiler: [],
-       // format: 'json:./reports/json/cucumber_report.json',
+       format: 'json:./reports/json/cucumber_report.json',
         strict: true,
         // format: ['pretty'],
       require: ['./test/stepdefinitions/*.steps.ts', './test/support/hooks.ts'],
         tags: '@addcontact'
     },
-
+    plugins: [
+      {
+        package: 'protractor-multiple-cucumber-html-reporter-plugin',
+        options: {
+          // read the options part
+          automaticallyGenerateReport: true,
+          removeExistingJsonReportFile: true
+        }
+      }
+    ],
     onComplete: function() {
-      //reporter.Reporter.createHTMLReport();
+      reporter.Reporter.createHTMLReport();
       }
 };
