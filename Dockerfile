@@ -5,7 +5,6 @@ RUN apt-get update && apt-get install -y google-chrome-stable
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
-RUN gulp
 RUN npm cache clean
 RUN npm install
 RUN npm run build:cucumber
