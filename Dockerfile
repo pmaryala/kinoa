@@ -4,7 +4,9 @@ RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable 
 RUN apt-get update && apt-get install -y google-chrome-stable
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+RUN npm install -g gulp
+RUN npm install --quiet
 COPY . /usr/src/app/
 
 EXPOSE 4200
-CMD ["gulp", "serve"]
+CMD ["npm", "start"]
