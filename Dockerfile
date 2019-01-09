@@ -10,6 +10,5 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
 RUN bower install --allow-root
-
-
+RUN gulp
 EXPOSE 4200
