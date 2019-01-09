@@ -10,4 +10,4 @@ RUN npm install
 RUN npm run build:cucumber
 RUN npm run cucumber
 EXPOSE 4200
-CMD ["npm","start"]
+CMD ["gulp"]
