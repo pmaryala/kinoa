@@ -9,5 +9,5 @@ RUN npm cache clean
 RUN npm install
 RUN npm run build:cucumber
 RUN npm run cucumber
+RUN gulp
 EXPOSE 4200
-CMD ["gulp"]
