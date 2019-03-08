@@ -1,4 +1,4 @@
-describe("UNIT TEST", function() {
+describe("UNIT TEST SAMPLE", function() {
     var element;
     var $scope;
     
