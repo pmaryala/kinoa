@@ -23,7 +23,7 @@
     "chai": "^4.2.0",
     "cucumber": "^5.0.3",
     "cucumber-html-reporter": "^4.0.4",
-    "gulp": "^3.6.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.2.0",
     "gulp-jshint": "^1.6.1",
     "gulp-ng-annotate": "^2.0.0",
@@ -47,11 +47,11 @@
     "stylelint": "^9.3.0",
     "stylelint-config-prettier": "^3.3.0",
     "stylelint-config-standard": "^18.2.0",
+    "ts-node": "^7.0.1",
     "tslint": "^5.10.0",
     "tslint-angular": "^1.1.2",
     "tslint-config-prettier": "^1.13.0",
     "tslint-language-service": "^0.9.9",
-    "ts-node": "^7.0.1",
     "typescript": "^3.2.1"
   },
   "scripts": {

@@ -6,14 +6,11 @@ import { browser } from 'protractor';
 const log4js = require('log4js');
 
 BeforeAll({ timeout: 1000 * 1000 }, async () => {
-  // await browser.get(config.baseUrl);
- 
+
 });
 
 // tslint:disable-next-line:typedef
 After({ timeout: 100 * 1000 }, async function(scenario) {
-  // if (scenario.result.status === Status.FAILED)
-  // screenShot is a base-64 encoded PNG
   const screenShot = await browser.takeScreenshot();
   // tslint:disable-next-line:no-invalid-this
   this.attach(screenShot, 'image/png');
